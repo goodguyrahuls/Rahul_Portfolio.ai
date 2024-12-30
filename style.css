@@ -1,0 +1,607 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", system-ui;
+}
+
+/* -------------------------------------nave bare -------------------------- */
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(4 9 30 / 0%), rgb(4 9 30 / 0%)), url(banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+.header nav {
+    display: flex;
+    padding: 2% 2%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2px 2px;
+    /* position: fixed; */
+    top: 0;
+    overflow: hidden;
+}
+
+img {
+    width: 100px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 25px;
+    /* font-weight: bold; */
+}
+
+.nav-links ul li ::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ff9a00;
+    display: block;
+    margin: auto;
+    transition: 0.5S;
+}
+
+.nav-links ul li :hover::after {
+    width: 100%;
+}
+
+/* ---------------------------------------home pages------------------------------------------- */
+.homepage {
+    align-items: center;
+    justify-content: center;
+    padding: 20px 75px 0;
+    width: 90%;
+    display: flex;
+    gap: 15px;
+}
+
+.text-box {
+    padding-left: 80px;
+    width: 100%;
+    text-align: start;
+}
+
+.textphas {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.textphas :hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    /* Darker shadow on hover */
+}
+
+.homepic {
+    width: 100%;
+}
+
+.homepic img {
+    padding-top: 50px;
+    padding-bottom: 0px;
+    padding-left: 40px;
+    width: 437px;
+    transition: transform .2s;
+}
+
+.homepic img:hover {
+    transform: scale(1.1);
+}
+
+
+.text-box h2 {
+    font-size: 25px;
+    color: #ff9a00;
+}
+
+.text-box h1 {
+    font-size: 40px;
+}
+
+.text-box h5 {
+    font-size: 35px;
+}
+
+.text-box .webtext {
+    color: #50a1f1e3;
+}
+
+.text-box samp {
+    color: #ff9a00;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: #110202;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    border: 1px solid #ff9a00;
+    padding: 12px 34px;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: #ff9a00;
+    font-weight: bold;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    border: 1px solid r#ff9a00ed;
+    background-color: #ff9a00;
+    color: white;
+    transition: 1s;
+}
+
+.text-box .fa {
+    gap: 10px;
+    color: #000000;
+}
+
+nav .fa {
+    display: none;
+    font-size: 25px;
+}
+
+.socila {
+    display: flex;
+    gap: 10px;
+}
+
+.socicon {
+    margin: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.socicon .fa {
+    margin: 2px;
+    color: #50a1f1e3;
+    transition: transform .2s;
+    font-size: 28px;
+}
+
+.socicon .fa:hover {
+    margin: 2px;
+    color: #268ff7e3;
+    font-size: 30px;
+    transform: scale(1.5);
+}
+
+/* -------------------------------Ecxplore more content------------------------------ */
+.content-suggestions {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    /* White background for contrast */
+    text-align: center;
+    /* Center text for a clean look */
+}
+
+.suggestions-heading {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ff9a00;
+    font-weight: 700;
+}
+
+.suggestions-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Responsive grid */
+    gap: 30px;
+    /* Space between suggestion items */
+    max-width: 1200px;
+    /* Maximum width for the section */
+    margin: 0 auto;
+    /* Center the content */
+}
+
+.suggestion-item {
+    background-color: #f9f9f9;
+    /* Light background for each suggestion */
+    border-radius: 15px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Ensures content fits nicely */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effect */
+}
+
+.suggestion-item:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    /* Darker shadow on hover */
+}
+
+.suggestion-item img {
+    width: 100%;
+    /* Responsive images */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.suggestion-item h3 {
+    font-size: 24px;
+    margin: 20px 0 10px;
+    color: #333;
+    /* Dark text for headings */
+}
+
+.suggestion-item p {
+    font-size: 16px;
+    color: #555;
+    /* Darker text for readability */
+    padding: 0 15px;
+    /* Padding for text */
+}
+
+.suggestion-btn {
+    display: inline-block;
+    /* Display as a block element */
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #550f3b;
+    /* Button color */
+    color: white;
+    /* Button text color */
+    border-radius: 25px;
+    /* Rounded corners */
+    text-decoration: none;
+    /* No underline */
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+.suggestion-btn:hover {
+    background-color: #550f3b;
+    /* Darker color on hover */
+}
+
+/* ---------------------------phase 2 Developing expriences----------------------- */
+.phase2 {
+    text-align: center;
+    padding: 20px;
+}
+
+.info {
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+
+}
+
+.info .part1 {
+    width: 100%;
+}
+
+.part1 img {
+    width: 100%;
+}
+
+.part2 {
+    margin: 10px;
+    width: 100%;
+    padding-top: 150px;
+    justify-content: left;
+}
+
+.part2 h2 {
+    text-align: start;
+    font-size: 20px;
+    color: #ff9a00;
+}
+
+.part2 h1 {
+    text-align: start;
+    font-size: 30px;
+    color: #000000;
+    padding-bottom: 10px;
+    padding-right: 30px;
+}
+
+.part2 p {
+    text-align: start;
+    font-size: 20px;
+    color: rgb(36, 35, 32);
+    padding-bottom: 10px;
+    padding-right: 30px;
+}
+
+.part2 .btnp1 {
+    padding: 35px 0 0;
+    text-align: start;
+}
+
+/* -------------------------Project work start foe website inforamation-------------------- */
+
+.portfoliopage {
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.pottext {
+    text-align: center;
+}
+
+.pottext h2 {
+    color: #ff9a00;
+    font-size: 35px;
+}
+
+.pottext p {
+    color: #232221;
+    font-size: 20px;
+    padding: 15px 0 35px;
+}
+
+.workpage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    padding: 5px;
+}
+
+.workpage .pagimg {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: #232221;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.workpage .pagimg:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    /* Darker shadow on hover */
+}
+
+.pagimg img {
+    width: 100%;
+}
+
+.pagimg h1 {
+    font-size: 20px;
+    color: #110202;
+}
+
+.pagimg p {
+    font-size: 18px;
+    color: #434343;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #5c5b5b;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-social {
+    margin-bottom: 15px;
+}
+
+.footer-link {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-link:hover {
+    color: #ff9a00;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 14px;
+}
+
+/*---------------------------------- responcive working start ------------------------ */
+@media(max-width:700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .text-box h2 {
+        font-size: 30px;
+        color: #ff9a00;
+    }
+
+    .text-box h5 {
+        font-size: 30px;
+    }
+
+    .text-box p {
+        margin: 10px 0 40px;
+        font-size: 20px;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    img {
+        width: 119px;
+    }
+
+    .header nav {
+        display: flex;
+        padding: 2% 2%;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2px 2px;
+        /* position: fixed; */
+        top: 0;
+        overflow: hidden;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: #50a1f1e3;
+        height: 113vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+
+    nav .fa {
+        display: block;
+        color: #000000;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .fa {
+        display: block;
+        color: #000000;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 10px;
+    }
+
+    .homepage {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+
+    .socicon {
+        margin: 15px;
+        text-align: center;
+        font-size: 6px;
+    }
+
+    .homepic img {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 3px;
+        width: 100%;
+    }
+
+    .text-box {
+        padding-left: 0px;
+    }
+
+    .info {
+        width: 100%;
+        margin: 0 0 0;
+        justify-content: space-evenly;
+        /* text-align: center; */
+        padding: 0 0 0px;
+        /* display: flex; */
+        /* gap: 15px; */
+        flex-direction: column;
+    }
+
+    .part2 p {
+        text-align: start;
+        font-size: 15px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+
+    .part2 {
+        margin: 10px;
+        width: 100%;
+        padding-top: 10px;
+        justify-content: left;
+    }
+
+    .part2 h1 {
+        font-size: 19px;
+
+    }
+
+    .portfoliopage {
+        /* width: 80%; */
+        margin: auto;
+        padding: 20px;
+    }
+
+    .workpage {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .pottext p {
+        color: #232221;
+        font-size: 17px;
+    }
+
+    .pagimg p {
+        font-size: 15px;
+        color: #434343;
+    }
+
+    /* --------------------------footer styl------------------------------- */
+    .footer-link {
+        color: #fff;
+        margin: 0 5px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+}
